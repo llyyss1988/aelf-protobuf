@@ -3,6 +3,16 @@ sudo apt-get update
 echo `date`
 old_path=`pwd`
 sudo mkdir /test && cd /test
+
+
+wget -q https://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get install apt-transport-https -y
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.1 -y
+dotnet --version
+
+
 sudo curl -OL https://github.com/google/protobuf/releases/download/v3.6.0/protoc-3.6.0-linux-x86_64.zip
 sudo apt-get install unzip
 sudo unzip protoc-3.6.0-linux-x86_64.zip -d protoc3
@@ -31,7 +41,7 @@ sudo echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main"
 sudo apt update
 sudo apt install nuget
 sudo apt-get install gcc gcc-c++ bison pkgconfig glib2-devel gettext make libpng-devel libjpeg-devel libtiff-devel libexif-devel giflib-devel libX11-devel freetype-devel fontconfig-devel cairo-devel
-sudo apt-get install mono-complete
+sudo apt-get mono-devel -y
 echo '-------------------------------------'
 nuget
 
