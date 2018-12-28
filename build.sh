@@ -1,6 +1,8 @@
 #!/bin/bash
 sudo apt-get update
 echo `date`
+old_path=`pwd`
+sudo mkdir /test && cd /test
 wget -q https://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get install apt-transport-https -y
@@ -15,6 +17,9 @@ sudo mv protoc3/bin/* /usr/local/bin/
 sudo mv protoc3/include/* /usr/local/include/
 protoc --version
 
+cd $old_path
+echo `pwd`
+echo '-------------------------------------------'
 sudo mkdir /home/c -p 
 for file in `ls | grep proto |grep -v grep`
 do
