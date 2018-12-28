@@ -1,10 +1,10 @@
 #!/bin/bash
 sudo apt-get update
 echo `date`
-#sudo apt-get install expect -y
-sudo  apt-get install nodejs -y
-sudo  apt-get install npm -y
-sudo npm install -g npm-cli-login
-echo $user $password $email
-npm-cli-login -u "$1"  -p "$2" -e "$3"
-npm publish
+mkdir /home/c -p 
+for file in `ls | grep proto |grep -v grep`
+do
+echo $file
+protoc --proto_path=./aelf-protobuf --csharp_out=/home/c  --csharp_opt=file_extension=.g.cs $file
+done
+ls /home/c
