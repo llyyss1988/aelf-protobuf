@@ -17,7 +17,7 @@ sudo mkdir /home/c -p
 for file in `ls | grep proto |grep -v grep`
 do
 echo $file
-protoc --proto_path=./ --csharp_out=/home/c  --csharp_opt=file_extension=.g.cs $file
+sudo protoc --proto_path=./ --csharp_out=/home/c  --csharp_opt=file_extension=.g.cs $file
 done
 ls /home/c
 echo 'eeeee'
