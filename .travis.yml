@@ -1,4 +1,4 @@
-language: dotnet
+language: c#
 sudo: required
 script:
   - chmod a+x ./build.sh
