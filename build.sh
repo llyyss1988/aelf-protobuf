@@ -25,12 +25,13 @@ do
 echo $file
 sudo protoc --proto_path=./ --csharp_out=/tmp/c  --csharp_opt=file_extension=.g.cs $file
 done
-cuso cp aelf-lys-2018.nuspec /tmp/c/
+sudo cp aelf-lys-2018.nuspec /tmp/c/
 echo '-----------------------------------'
 ls /tmp/c/*
 echo '-----------------------------------'
 
 cd /tmp/c
+nuget  pack aelf-lys-2018.nuspec
 nuget  push aelf-lys-2018.2.2.2.nupkg  oy2ef7s5vvskzakubp6qtphejve6pcbudbo5xbajm2vqae  -src https://www.nuget.org
 echo  '-----------------------------'
 echo  '-----------------------------'
