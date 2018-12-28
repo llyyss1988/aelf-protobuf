@@ -3,13 +3,6 @@ sudo apt-get update
 echo `date`
 old_path=`pwd`
 sudo mkdir /test && cd /test
-wget -q https://packages.microsoft.com/config/ubuntu/14.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo apt-get install apt-transport-https -y
-sudo apt-get update
-sudo apt-get install dotnet-sdk-2.1 -y
-dotnet --version
-
 curl -OL https://github.com/google/protobuf/releases/download/v3.6.0/protoc-3.6.0-linux-x86_64.zip
 apt-get install unzip
 unzip protoc-3.6.0-linux-x86_64.zip -d protoc3
