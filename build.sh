@@ -20,3 +20,4 @@ echo $file
 protoc --proto_path=./ --csharp_out=/home/c  --csharp_opt=file_extension=.g.cs $file
 done
 ls /home/c
+echo 'eeeee'
