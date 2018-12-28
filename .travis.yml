@@ -1,7 +1,5 @@
-language: node
-node_js:
-  - "10"
+language: dotnet
 sudo: required
 script:
   - chmod a+x ./build.sh
-  - ./build.sh $user $password $email
+  - ./build.sh
