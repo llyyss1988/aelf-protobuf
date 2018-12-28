@@ -1,5 +1,8 @@
 language: csharp
 sudo: required
+dotnet: 2.1.400
+protoc: 3.6.1
+nuget: 4.9.2
 script:
   - chmod a+x ./build.sh
   - ./build.sh
