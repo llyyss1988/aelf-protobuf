@@ -19,18 +19,18 @@ nuget
 
 
 cd $old_path
-sudo mkdir ~/c -p 
+sudo mkdir /tmp/c -p 
 for file in `ls | grep proto |grep -v grep`
 do
 echo $file
-sudo protoc --proto_path=./ --csharp_out=~/c  --csharp_opt=file_extension=.g.cs $file
+sudo protoc --proto_path=./ --csharp_out=/tmp/c  --csharp_opt=file_extension=.g.cs $file
 done
-cuso cp aelf-lys-2018.nuspec ~/c/
+cuso cp aelf-lys-2018.nuspec /tmp/c/
 echo '-----------------------------------'
-ls ~/c/*
+ls /tmp/c/*
 echo '-----------------------------------'
 
-cd ~/c
+cd /tmp/c
 nuget  push aelf-lys-2018.2.2.2.nupkg  oy2ef7s5vvskzakubp6qtphejve6pcbudbo5xbajm2vqae  -src https://www.nuget.org
 echo  '-----------------------------'
 echo  '-----------------------------'
