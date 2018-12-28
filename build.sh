@@ -1,6 +1,8 @@
 #!/bin/bash
 sudo apt-get update
 echo `date`
+dotnet --version
+protoc --version
 mkdir /home/c -p 
 for file in `ls | grep proto |grep -v grep`
 do
