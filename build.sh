@@ -31,7 +31,7 @@ sudo echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main"
 sudo apt update
 sudo apt install nuget
 sudo apt-get install gcc gcc-c++ bison pkgconfig glib2-devel gettext make libpng-devel libjpeg-devel libtiff-devel libexif-devel giflib-devel libX11-devel freetype-devel fontconfig-devel cairo-devel
-sudo apt install mono-devel -y
+sudo apt-get install mono-complete
 echo '-------------------------------------'
 nuget
 
