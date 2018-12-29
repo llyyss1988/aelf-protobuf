@@ -17,7 +17,7 @@ echo 'nuget--------'
 nuget
 
 
-
+# c#
 cd $old_path
 sudo mkdir /tmp/c -p 
 for file in `ls | grep proto |grep -v grep`
@@ -37,3 +37,16 @@ ver=`cat aelf-lys-2018.nuspec | grep \<version\>|awk -F[\>\<] '{print $3}'`
 sudo nuget  push aelf-lys-2018.${ver}.nupkg  oy2ef7s5vvskzakubp6qtphejve6pcbudbo5xbajm2vqae  -src https://www.nuget.org
 echo  '-----------------------------'
 echo  '-----------------------------'
+# js
+
+cd $old_path
+sudo mkdir /tmp/js -p 
+for file in `ls | grep proto |grep -v grep`
+do
+echo $file
+sudo protoc --proto_path=./ --js_out=/tmp/c  --csharp_opt=file_extension=.js $file
+done
+echo '-----------------------------------'
+ls /tmp/js/*
+echo '-----------------------------------'
+
