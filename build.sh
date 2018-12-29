@@ -44,7 +44,7 @@ sudo mkdir /tmp/js -p
 for file in `ls | grep proto |grep -v grep`
 do
 echo $file
-sudo protoc --proto_path=./ --js_out=/tmp/c  --csharp_opt=file_extension=.js $file
+sudo protoc --proto_path=./ --js_out=/tmp/js --csharp_opt=file_extension=.js $file
 done
 echo '-----------------------------------'
 ls /tmp/js/*
