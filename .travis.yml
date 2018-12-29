@@ -5,4 +5,4 @@ protoc: 3.6.1
 nuget: 4.9.2
 script:
   - chmod a+x ./build.sh
-  - ./build.sh aelf-lys-2018 $key
+  - ./build.sh aelf-lys-2018 $NUGET_API_KEY
