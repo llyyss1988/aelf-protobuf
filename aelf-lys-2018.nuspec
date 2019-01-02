@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>aelf-lys-2018</id>
-    <version>4.4.4</version>
+    <version>5.0.1</version>
     <authors>root</authors>
     <owners>root</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
@@ -12,7 +12,7 @@
     <description>Package description</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2018</copyright>
-    <tags>Tag1 Tag2</tags>
+    <tags>aelf app</tags>
     <dependencies>
       <dependency id="SampleDependency" version="1.0" />
     </dependencies>
